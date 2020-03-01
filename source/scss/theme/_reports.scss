@@ -4,11 +4,20 @@
     min-height: 250px;
     background-color: $white;
     padding: 12px;
+    .subtitle{
+        margin-top: 20px;
+    }
 }
 
 .card-time-learn {
+    @extend %flex-equal;
     @extend .card-last-results;
     width: 58%;
+    .verticalBars{
+        border-top: 1px solid $colorComplement;
+        padding-top: 10px;
+        @extend %w-100;
+    }
 }
 
 @mixin reportTypograph {
@@ -23,9 +32,13 @@
     border-bottom: 1px solid $greyLight;
     padding: 12px 0;
 
+    &:last-child {
+        border-bottom: none;
+    }
     .text {
         @extend %flex-start;
         width: 65%;
+
         .identifier {
             @include reportTypograph;
             color: $textColor;
@@ -38,11 +51,12 @@
         }
     }
 
-    .bar {       
+    .bar {
         @extend %h-100;
-        width: 35%;  
-        .value{
+        width: 35%;
+
+        .value {
             @extend %font-size-small
-        }   
+        }
     }
 }

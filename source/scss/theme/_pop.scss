@@ -1,0 +1,40 @@
+.pop-info {
+    box-sizing: border-box;
+    z-index: z($modal);
+    @extend %elem-shadow;
+    @extend %transition;
+    @extend %absolute;
+    @include border-radius($borderRadiusElem);
+    @extend %fontPadrao;
+    @extend %font-size-small;
+    @extend %hide;
+    padding: 8px;
+    min-width: 150px;
+    background-color: $textColor;
+    color: $white;
+
+    &:after {
+        z-index: z($outdated-browser);
+        position: absolute;
+        left: 10%;
+        top: 100%;
+        display: block;
+        content: '';
+        border-top: 10px solid $textColor;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;  
+    }
+}
+
+.pop-info[data-position=top] {
+    @extend %transition;
+    top: -30px;
+    left: -0%;
+}
+
+.pop-info[data-position=left] {
+    @extend %transition;
+    top: 50%;
+    left: -0%;
+}

@@ -2,8 +2,9 @@ body{
     @extend %centralize;
     background-color: $colorBase;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 2%;
 }
 a{
     color:inherit;

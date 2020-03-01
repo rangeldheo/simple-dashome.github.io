@@ -1,13 +1,14 @@
 .dashboard {
     @extend .cont-radius;
     @extend %centralize;
+    @extend %margin-bottom;
     width: 88vw;
-    height: 90vh;
-    background-color: #fff
+    min-height: 80vh;
+    background-color: #fff;
 }
 
 .dashboard-menu {
-    @extend %h-100;
+    min-height: 100vh;
     width: $dashMenu_widht;
     border-right: 1px solid #eae9ee;
 
@@ -28,7 +29,7 @@
             @extend %bold;
             @extend %font-size-medium;
 
-            .link{
+            .link {
                 padding: 10px 0 10px 40px;
                 @extend %transition;
                 @extend %flex-start;
@@ -55,7 +56,7 @@
 }
 
 .dashboard-main {
-    @extend %h-100;
+    min-height: 100vh;
     width: $dashMain_width;
     background-color: $colorComplement;
     padding: 40px;
@@ -63,37 +64,44 @@
     .header {
         @extend %centralize-equal;
         @extend %margin-bottom;
+
         h2 {
             @extend %flex-start;
         }
     }
 
-    .card-welcome {  
-        $tempValue : 25px;
-        @extend %centralize;    
+    .card-welcome {
+        $tempValue: 25px;
+        @extend %centralize;
         @extend %w-100;
         @include cardBasic;
         background-color: $redLight;
         height: 150px;
-        padding:  $tempValue;
+        padding: $tempValue;
         @extend %margin-bottom;
-        .right-container{
+
+        .right-container {
             @extend %centralize;
-            .header{
+
+            .header {
                 @extend %w-100;
-                .title{
+
+                .title {
                     @extend %margin-bottom;
                     @extend %w-100;
-                    color: $red;                    
+                    color: $red;
                 }
-                .paragraph{
+
+                .paragraph {
                     @extend %w-100;
                 }
             }
         }
+
         .left-container {
             @extend %relative;
             @extend %h-100;
+
             .animate {
                 z-index: z($site-header);
                 @extend %absolute;
@@ -114,18 +122,25 @@
     padding: 40px 40px 40px 0;
 }
 
+@mixin headerTypograph {   
+    @extend %fontPadrao;
+    @extend %bold;
+    @extend %text-color;
+}
+
 .header {
     .title {
-        @extend %fontPadrao;
-        @extend %bold;
-        @extend %text-color;
-        @extend %font-size-default
+        @include headerTypograph;
+        @extend %font-size-default;
+    }
+
+    .subtitle {
+        @include headerTypograph;
+        @extend %font-size-small;
     }
 
     h2 {
-        @extend %fontPadrao;
-        @extend %bold;
-        @extend %text-color;
+        @include headerTypograph;
         @extend %font-size-medium
     }
 }

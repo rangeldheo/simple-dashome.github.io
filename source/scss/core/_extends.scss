@@ -113,7 +113,8 @@
 %margin-auto {
     margin: auto;
 }
-%margin-bottom{
+
+%margin-bottom {
     margin-bottom: 25px;
 }
 
@@ -152,6 +153,10 @@
     @include border-radius(50%);
 }
 
+%elem-shadow {
+    box-shadow: 0 2px 10px 3px rgba(0, 0, 0, 0.15);
+}
+
 .circle {
     @extend %circle;
 }
@@ -167,12 +172,15 @@
 .elem-radius {
     @include border-radius($borderRadiusElem);
 }
-.elem-shadow{
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.03);
+
+.elem-shadow {
+    @extend %elem-shadow;
 }
-%debugBorder{
-    border:1px solid red!important
+
+%debugBorder {
+    border: 1px solid red !important
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //Visual attributes (ELEMENT priority) : font-size, font-family, text-align, text-transform, color..//
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -184,19 +192,23 @@
     font-family: Arial, sans-serif;
 }
 
-%font-size-large{
+%font-size-large {
     font-size: $fontLarge;
 }
-%font-size-default{
+
+%font-size-default {
     font-size: $fontDefault;
 }
-%font-size-medium{
+
+%font-size-medium {
     font-size: $fontMedium;
 }
-%font-size-small{
+
+%font-size-small {
     font-size: $fontSmall;
 }
-%font-size-smaller{
+
+%font-size-smaller {
     font-size: $fontSmaller;
 }
 

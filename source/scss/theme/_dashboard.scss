@@ -1,0 +1,131 @@
+.dashboard {
+    @extend .cont-radius;
+    @extend %centralize;
+    width: 88vw;
+    height: 90vh;
+    background-color: #fff
+}
+
+.dashboard-menu {
+    @extend %h-100;
+    width: $dashMenu_widht;
+    border-right: 1px solid #eae9ee;
+
+    .header {
+        @extend %centralize;
+        @extend %txt-center;
+        padding: 40px 10px;
+        margin-bottom: 40px;
+    }
+
+    .menu {
+        @extend %centralize;
+
+        li {
+            @extend %w-100;
+            @extend %fontPadrao;
+            @extend %color-secondary;
+            @extend %bold;
+            @extend %font-size-medium;
+
+            .link{
+                padding: 10px 0 10px 40px;
+                @extend %transition;
+                @extend %flex-start;
+
+                &:hover {
+                    background-color: $colorComplement;
+                }
+            }
+
+            .icon {
+                @extend %block;
+            }
+
+            span {
+                @extend %block;
+                padding-left: 15px;
+            }
+        }
+
+        .active {
+            border-right: 2px solid $textColor;
+        }
+    }
+}
+
+.dashboard-main {
+    @extend %h-100;
+    width: $dashMain_width;
+    background-color: $colorComplement;
+    padding: 40px;
+
+    .header {
+        @extend %centralize-equal;
+        @extend %margin-bottom;
+        h2 {
+            @extend %flex-start;
+        }
+    }
+
+    .card-welcome {  
+        $tempValue : 25px;
+        @extend %centralize;    
+        @extend %w-100;
+        @include cardBasic;
+        background-color: $redLight;
+        height: 150px;
+        padding:  $tempValue;
+        @extend %margin-bottom;
+        .right-container{
+            @extend %centralize;
+            .header{
+                @extend %w-100;
+                .title{
+                    @extend %margin-bottom;
+                    @extend %w-100;
+                    color: $red;                    
+                }
+                .paragraph{
+                    @extend %w-100;
+                }
+            }
+        }
+        .left-container {
+            @extend %relative;
+            @extend %h-100;
+            .animate {
+                z-index: z($site-header);
+                @extend %absolute;
+                @extend %w-100;
+                bottom: -#{$tempValue};
+                height: 180px;
+                background: url('#{$path_images}/welcome.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.dashboard-actions {
+    @extend %h-100;
+    width: $dashActions_width;
+    border-left: 1px solid #eae9ee;
+    padding: 40px 40px 40px 0;
+}
+
+.header {
+    .title {
+        @extend %fontPadrao;
+        @extend %bold;
+        @extend %text-color;
+        @extend %font-size-default
+    }
+
+    h2 {
+        @extend %fontPadrao;
+        @extend %bold;
+        @extend %text-color;
+        @extend %font-size-medium
+    }
+}

@@ -1,0 +1,14 @@
+@if $create-fonts {
+  @each $font in $fonts {
+    @font-face {
+      font-family: '#{$font}';
+      src: url('#{$fonts_location}#{$font}.otf');  
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+}
+
+%fontPadrao{
+    font-family: 'Montserrat', sans-serif;
+}

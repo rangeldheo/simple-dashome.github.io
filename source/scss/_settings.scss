@@ -1,0 +1,40 @@
+$path_images      : '../../images';
+
+$colorBase        : rgba(197,203,216,1);
+$colorComplement  : rgba(243,241,250,1);
+
+$primary          : rgba(47,46,111,1);
+$secondary        : rgba(120,121,178,1);
+
+$black            : rgba(0,0,0,1);
+$white            : rgba(255,255,255,1);
+$grey             : lighten($black,70%);
+$greyLight        : lighten($black,90%);
+$red              : rgba(255,128,139,1);
+$redLight         : rgba(248,229,233,1);
+
+$borderRadiusCont : 20px;
+$borderRadiusCard : 10px;
+$borderRadiusElem : 5px;
+
+$textColor        : rgba(3,5,64,1);
+
+$create-fonts     : false;
+$fontLarge        : 2.5rem;
+$fontDefault      : 1.6rem;
+$fontMedium       : 0.85rem;
+$fontSmall        : 0.75rem;
+$fontSmaller      : 0.7rem;
+$defaultLineHeith : 1.2rem;
+
+$iconSize         : 40px;
+
+$outdated-browser : 'outdated-browser';
+$modal            : 'modal';
+$site-header      : 'site-header';
+$page-wrapper     : 'page-wrapper';
+$site-footer      : 'site-footer';
+
+$dashMenu_widht    : 15%;
+$dashActions_width : 20%;
+$dashMain_width    : 100% - ($dashMenu_widht + $dashActions_width);

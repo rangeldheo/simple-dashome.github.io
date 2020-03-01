@@ -1,0 +1,41 @@
+@mixin progressStyle {
+    @include border-radius(5px);    
+    height: 5px;
+}
+
+.bar {
+    @extend %flex-start;
+    .progress-container {
+        @include progressStyle;
+        @extend %flex-equal;
+        @extend %relative;
+        width: 60%;
+        background-color: $greyLight;
+        .progress {
+            @include progressStyle;
+            @extend %absolute;
+            max-width: 100%;
+            left: 0;
+            top: 0;
+            background-color: lighten($textColor,70);            
+        }
+    }
+
+    .value {
+        @extend %fontPadrao;
+        @extend %font-size-small;       
+        margin-left: 10px;
+        font-weight: 600;
+        color: $secondary;
+    } 
+}
+.bar-negative{
+    .progress-container{
+        .progress{
+            background-color: $red;          
+        }
+    }
+    .value{
+        color: $red;
+    }
+}

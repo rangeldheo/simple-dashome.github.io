@@ -1,0 +1,39 @@
+.icon {         
+    width: $iconSize;
+    height: $iconSize;
+}
+
+$icon-list : (
+    ('home'     ,'web-design'),
+    ('classes'  ,'code-file-1'),
+    ('resources','cloud-line-chart'),
+    ('learning' ,'health-calendar'),
+    ('chat'     ,'online-support'),
+    ('settings' ,'edit-property')
+);
+
+@each $icon in $icon-list {
+     $name : nth($icon,1); 
+     $img  : nth($icon,2); 
+    .#{$name} {
+        @extend %circle;    
+        @extend .icon;
+        background: $colorComplement url('https://img.icons8.com/cotton/24/000000/#{$img}.png') no-repeat center
+    }
+}
+
+$icon-list : (
+    ('search','search'),
+    ('search','search'),
+);
+
+
+@each $icon in $icon-list {
+    $name : nth($icon,1); 
+    $img  : nth($icon,2); 
+   .#{$name} {
+       @include border-radius($borderRadiusElem);  
+       @extend .icon;
+       background: $colorBase url('https://img.icons8.com/material-rounded/24/ffffff/#{$img}.png') no-repeat center
+   }
+}

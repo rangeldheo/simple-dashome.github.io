@@ -1,0 +1,48 @@
+.card-last-results {
+    @include cardBasic;
+    width: 38%;
+    min-height: 250px;
+    background-color: $white;
+    padding: 12px;
+}
+
+.card-time-learn {
+    @extend .card-last-results;
+    width: 58%;
+}
+
+@mixin reportTypograph {
+    @extend %fontPadrao;
+    @extend %font-size-smaller;
+    font-weight: 600;
+}
+
+.report-item {
+    @extend %flex-equal;
+    @extend %w-100;
+    border-bottom: 1px solid $greyLight;
+    padding: 12px 0;
+
+    .text {
+        @extend %flex-start;
+        width: 65%;
+        .identifier {
+            @include reportTypograph;
+            color: $textColor;
+            margin-right: 5px;
+        }
+
+        .name {
+            @include reportTypograph;
+            color: $grey;
+        }
+    }
+
+    .bar {       
+        @extend %h-100;
+        width: 35%;  
+        .value{
+            @extend %font-size-small
+        }   
+    }
+}

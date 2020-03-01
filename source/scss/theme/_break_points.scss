@@ -1,0 +1,24 @@
+@media (max-width: 1366px) {
+    .dashboard {
+        width: 96vw;
+        .header{
+            .title{
+                font-size: 1.2rem;
+            }
+        }
+        .dashboard-menu {
+            .menu {
+                li {
+                    .link {
+                        padding: 10px 0 10px 20px;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .paragraph{
+        font-size: $fontSmall;
+    }
+}

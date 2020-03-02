@@ -4,19 +4,19 @@
     @extend %centralize;
     @extend .elem-radius;
     @extend %bold;
-    background-color: $greyLight;
-    padding: 5px 0;
-    color: $textColor;
+    @extend %text-color;
+    @extend %bg-greyLight;
+    padding: 5px 0;    
 }
 
 .tag-primary {
     @extend .tag;
-    background-color: $primary;
-    color: $white;
+    @extend %color-white;
+    @extend %bg-primary;
 }
 
 .tag-alert {
     @extend .tag;
-    background-color: $red;
-    color: $white;
+    @extend %color-white;
+    @extend %bg-red;
 }

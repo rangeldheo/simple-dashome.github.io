@@ -1,5 +1,4 @@
-.pop-info {
-    box-sizing: border-box;
+.pop-info {   
     z-index: z($modal);
     @extend %elem-shadow;
     @extend %transition;
@@ -8,10 +7,10 @@
     @extend %fontPadrao;
     @extend %font-size-smaller;
     @extend %hide;
+    @extend %color-white;
+    @extend %bg-dark-blue;
     padding: 8px;
-    min-width: 200px;
-    background-color: $textColor;
-    color: $white;
+    min-width: 200px; 
 
     &:after {
         z-index: z($outdated-browser);

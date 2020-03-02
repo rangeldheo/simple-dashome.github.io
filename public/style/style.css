@@ -119,11 +119,11 @@ table {
   display: flex;
 }
 
-.goto, .card-curso .goto, .card-user .head .name, .card-user .content .goto, .bar .progress-container .progress, .verticalBars .item-bar .tag, .verticalBars .item-bar .tag-primary, .verticalBars .item-bar .tag-alert, .verticalBars .item-bar .item, .dashboard-main .card-welcome .left-container .animate, .dashboard-main .card-welcome .right-container .animate, .pop-info {
+.goto, .card-curso .goto, .card-user .head .name, .card-user .content .goto, .bar .progress-container .progress, .verticalBars .item-bar .tag, .verticalBars .item-bar .tag-primary, .verticalBars .item-bar .tag-alert, .verticalBars .item-bar .item, .dashboard-main .card-welcome .left-container .animate, .dashboard-main .card-welcome .right-container .animate, .pop-info, .my-profile .head .btn-plus {
   position: absolute;
 }
 
-.card-curso, .card-user .head, .card-user .content, .bar .progress-container, .verticalBars .item-bar, .dashboard-main .card-welcome .left-container, .dashboard-main .card-welcome .right-container {
+.card-curso, .card-user .head, .card-user .content, .bar .progress-container, .verticalBars .item-bar, .dashboard-main .card-welcome .left-container, .dashboard-main .card-welcome .right-container, .my-profile .head {
   position: relative;
 }
 
@@ -140,6 +140,17 @@ table {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.card-curso, .card-user, .verticalBars .item-bar {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card-curso, .card-user, .verticalBars .item-bar {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
 }
 
 .flex-center, body, .card-user .head, .dashboard, .dashboard-menu .header, .dashboard-menu .menu, .dashboard-main .card-welcome, .dashboard-main .card-welcome .right-container, .tag, .tag-primary, .tag-alert, .my-profile .head {
@@ -234,11 +245,51 @@ table {
   height: 100%;
 }
 
+body, .dashboard-menu, .dashboard-main {
+  min-height: 100vh;
+}
+
 .btn-primary {
   padding: 0 10px;
 }
 
-.circle, .home, .classes, .resources, .learning, .chat, .settings, .goto, .card-user .head .user-photo, .my-profile .head .profile-photo {
+.goto, .card-user, .card-user .head .user-photo, .card-last-results, .card-time-learn, .my-profile .head .profile-photo {
+  background: white;
+}
+
+.btn-primary, .card-user .head .name, .verticalBars .item-bar .item, .tag-primary {
+  background-color: #2f2e6f;
+}
+
+.bar-negative .progress-container .progress, .tag-alert {
+  background-color: #ff808b;
+}
+
+.bar .progress-container, .verticalBars .item-bar, .tag, .tag-primary, .tag-alert {
+  background-color: #e6e6e6;
+}
+
+.goto:hover, .btn-plus, .verticalBars .item-bar:nth-child(odd) {
+  background-color: #5f80f5;
+}
+
+.card-curso, .pop-info, .my-profile .head .btn-plus:hover {
+  background-color: #030540;
+}
+
+.card-user:nth-child(odd) .head, .verticalBars .item-bar:nth-child(even) {
+  background-color: #009daf;
+}
+
+body, .card-user .head {
+  background-color: #c5cbd8;
+}
+
+.dashboard-menu .menu li .link:hover, .dashboard-main {
+  background-color: #f3f1fa;
+}
+
+.circle, .home, .classes, .resources, .learning, .chat, .settings, .goto, .btn-plus, .card-user .head .user-photo, .my-profile .head .profile-photo {
   border-radius: 50%;
 }
 
@@ -288,15 +339,31 @@ table {
   font-weight: bold;
 }
 
-.header .title, .header .subtitle, .header h2 {
+.card-user .head .name, .bar .value, .report-item .text .identifier, .report-item .text .name {
+  font-weight: 600;
+}
+
+.paragraph, .header .title, .header .subtitle, .header h2, .tag, .tag-primary, .tag-alert, .report-item .text .identifier {
   color: #030540;
 }
 
-.dashboard-menu .menu li {
+.btn-primary:hover, .bar .value, .dashboard-menu .menu li {
   color: #7879b2;
 }
 
-.btn, .btn-primary, .card-curso .goto, .card-user .content .goto, .verticalBars .item-bar {
+.btn-primary, .card-curso .code, .card-curso .text p, .card-curso .text a, .card-user .head .name, .verticalBars .item-bar .item, .pop-info, .tag-primary, .tag-alert {
+  color: white;
+}
+
+.bar-negative .value, .dashboard-main .card-welcome .right-container .header .title {
+  color: #ff808b;
+}
+
+.info, .report-item .text .name {
+  color: #b3b3b3;
+}
+
+.btn, .btn-primary, .card-curso .goto, .card-user .content .goto, .verticalBars .item-bar, .my-profile .head .btn-plus {
   cursor: pointer;
 }
 
@@ -313,9 +380,7 @@ table {
     Função para automatizar a compatibilidade de z-idexes
 */
 body {
-  background-color: #c5cbd8;
   width: 100vw;
-  min-height: 100vh;
   overflow-x: hidden;
   padding-top: 2%;
 }
@@ -364,12 +429,7 @@ a {
   background: #c5cbd8 url("https://img.icons8.com/material-rounded/24/ffffff/search.png") no-repeat center;
 }
 
-.info {
-  color: #b3b3b3;
-}
-
 .paragraph {
-  color: #030540;
   line-height: 1.2rem;
 }
 
@@ -378,38 +438,29 @@ a {
   height: 30px;
 }
 
-.btn-primary {
-  background-color: #2f2e6f;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #7879b2;
-}
-
 .goto {
   width: 24px;
   height: 24px;
-  background-color: white;
   background-image: url("https://img.icons8.com/material-outlined/16/000000/advance.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .goto:hover {
-  background-color: #5f80f5;
   background-image: url("https://img.icons8.com/material-outlined/16/ffffff/advance.png");
+}
+
+.btn-plus {
+  width: 25px;
+  height: 25px;
+  background-image: url("https://img.icons8.com/android/15/ffffff/plus.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-curso {
   padding: 12px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
   max-width: 32.5%;
-  background-color: #030540;
 }
 
 .card-curso .goto {
@@ -420,13 +471,11 @@ a {
 .card-curso .code {
   padding: 8px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
 }
 
 .card-curso .text p,
 .card-curso .text a {
   padding-left: 10px;
-  color: white;
   line-height: 1.2rem;
 }
 
@@ -435,17 +484,7 @@ a {
 }
 
 .card-user {
-  background-color: white;
   min-width: 150px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-}
-
-.card-user:nth-child(odd) .head {
-  background-color: #009daf;
 }
 
 .card-user .head {
@@ -461,25 +500,20 @@ a {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #c5cbd8;
   padding: 20px 12px;
 }
 
 .card-user .head .user-photo {
-  background-color: white;
   border: 5px solid white;
   width: 60px;
   height: 60px;
 }
 
 .card-user .head .name {
-  font-weight: 600;
   left: 5%;
   bottom: -10px;
   width: 90%;
   padding: 5px;
-  color: white;
-  background-color: #2f2e6f;
 }
 
 .card-user .content {
@@ -506,7 +540,6 @@ a {
   border-radius: 5px;
   height: 5px;
   width: calc(100% - 50px);
-  background-color: #e6e6e6;
 }
 
 .bar .progress-container .progress {
@@ -516,19 +549,6 @@ a {
   left: 0;
   top: 0;
   background-color: #adaffb;
-}
-
-.bar .value {
-  font-weight: 600;
-  color: #7879b2;
-}
-
-.bar-negative .progress-container .progress {
-  background-color: #ff808b;
-}
-
-.bar-negative .value {
-  color: #ff808b;
 }
 
 .verticalBars {
@@ -541,12 +561,6 @@ a {
 
 .verticalBars .item-bar {
   border-radius: 5px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  background-color: #e6e6e6;
   background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0.5) 4px);
   min-height: 2px;
   margin: 0 3px;
@@ -562,16 +576,6 @@ a {
   margin-top: 5px;
   top: 100%;
   padding: 3px 0;
-  background-color: #2f2e6f;
-  color: white;
-}
-
-.verticalBars .item-bar:nth-child(even) {
-  background-color: #009daf;
-}
-
-.verticalBars .item-bar:nth-child(odd) {
-  background-color: #5f80f5;
 }
 
 .verticalBars .item-bar:last-child .pop-info {
@@ -593,7 +597,6 @@ a {
 }
 
 .dashboard-menu {
-  min-height: 100vh;
   width: 18%;
   border-right: 1px solid #eae9ee;
 }
@@ -607,10 +610,6 @@ a {
   padding: 10px 0 10px 40px;
 }
 
-.dashboard-menu .menu li .link:hover {
-  background-color: #f3f1fa;
-}
-
 .dashboard-menu .menu li span {
   padding-left: 15px;
 }
@@ -620,9 +619,7 @@ a {
 }
 
 .dashboard-main {
-  min-height: 100vh;
   width: 62%;
-  background-color: #f3f1fa;
   padding: 40px;
 }
 
@@ -632,13 +629,8 @@ a {
   padding: 25px;
 }
 
-.dashboard-main .card-welcome .right-container .header .title {
-  color: #ff808b;
-}
-
 .dashboard-main .card-welcome .left-container .animate, .dashboard-main .card-welcome .right-container .animate {
   z-index: 3;
-  bottom: -25px;
   height: 180px;
   background: url("../../images/welcome.png") no-repeat center;
   background-size: contain;
@@ -655,14 +647,10 @@ a {
 }
 
 .pop-info {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   z-index: 4;
   border-radius: 5px;
   padding: 8px;
   min-width: 200px;
-  background-color: #030540;
-  color: white;
 }
 
 .pop-info:after {
@@ -687,25 +675,12 @@ a {
 }
 
 .tag, .tag-primary, .tag-alert {
-  background-color: #e6e6e6;
   padding: 5px 0;
-  color: #030540;
-}
-
-.tag-primary {
-  background-color: #2f2e6f;
-  color: white;
-}
-
-.tag-alert {
-  background-color: #ff808b;
-  color: white;
 }
 
 .card-last-results, .card-time-learn {
   width: 38%;
   min-height: 250px;
-  background-color: white;
   padding: 12px;
 }
 
@@ -740,14 +715,7 @@ a {
 }
 
 .report-item .text .identifier {
-  font-weight: 600;
-  color: #030540;
   margin-right: 5px;
-}
-
-.report-item .text .name {
-  font-weight: 600;
-  color: #b3b3b3;
 }
 
 .report-item .bar {
@@ -770,7 +738,11 @@ a {
 .my-profile .head .profile-photo {
   border: 3px solid #e6e6e6;
   padding: 20px;
-  background-color: white;
+}
+
+.my-profile .head .btn-plus {
+  right: calc(50% - 70px);
+  bottom: calc(50% - 70px);
 }
 
 @media (max-width: 1366px) {

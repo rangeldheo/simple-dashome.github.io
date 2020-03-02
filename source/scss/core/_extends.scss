@@ -64,7 +64,12 @@
 %flexbox {
     @include flexbox;
 }
-
+%grow-1{
+    flex-grow: 1;
+}
+%basic-0{
+    flex-basis: 0;
+}
 .flexbox {
     @extend %flexbox;
 }
@@ -137,7 +142,9 @@
 %h-100 {
     height: 100%;
 }
-
+%min-height{
+    min-height: 100vh;
+}
 %paddingButton {
     padding: $paddingButton;
 }
@@ -153,6 +160,30 @@
     background: $white
 }
 
+%bg-primary{
+    background-color: $primary
+}
+%bg-red{
+    background-color: $red
+}
+%bg-greyLight{
+    background-color: $greyLight;
+}
+%bg-blue{
+    background-color: $blue
+}
+%bg-dark-blue{
+    background-color: $textColor;
+}
+%bg-green{
+    background-color: $green;
+}
+%bg-color-base{
+    background-color: $colorBase;
+}
+%bg-color-complement{
+    background-color: $colorComplement;
+}
 %no-border {
     border: none;
 }
@@ -249,7 +280,9 @@
 %bold {
     font-weight: bold;
 }
-
+%weight-600{
+    font-weight: 600;
+}
 %text-color {
     color: $textColor;
 }
@@ -262,14 +295,19 @@
     color: $secondary;
 }
 
-%black {
+%color-black {
     color: $black;
 }
 
-%white {
+%color-white {
     color: $white;
 }
-
+%color-red{
+    color: $red;
+}
+%color-grey{
+    color: $grey;
+}
 %italic {
     font-style: italic;
 }

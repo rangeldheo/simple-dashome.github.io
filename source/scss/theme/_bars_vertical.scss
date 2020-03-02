@@ -7,10 +7,10 @@
         @extend %pointer;
         @extend %transition;
         @extend %relative;
+        @extend %bg-greyLight;
         @include border-radius($borderRadiusElem);
-        flex-grow: 1;
-        flex-basis: 0;
-        background-color: $greyLight;
+        @extend %grow-1;
+        @extend %basic-0;     
         background-image: repeating-linear-gradient($barRotation, transparent, transparent $barSizeLine, rgba(255, 255, 255, .5) $barSizeLine, rgba(255, 255, 255, .5) 2 * $barSizeLine);
         min-height: 2px;
         margin: 0 3px;
@@ -29,19 +29,19 @@
             @extend %txt-center;
             @extend %elem-radius;
             @extend %w-100;
+            @extend %color-white;
+            @extend %bg-primary;
             margin-top: 5px;
             top: 100%;
-            padding: 3px 0;
-            background-color: $primary;
-            color: $white;          
+            padding: 3px 0;                           
         }
 
         &:nth-child(even) {
-            background-color: $green;
+            @extend %bg-green;
         }
 
         &:nth-child(odd) {
-            background-color: $blue
+           @extend %bg-blue;
         }
 
         &:hover {

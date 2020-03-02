@@ -11,8 +11,8 @@
         @include progressStyle;
         @extend %flex-equal;
         @extend %relative;
-        width: calc(100% - 50px);
-        background-color: $greyLight;
+        @extend %bg-greyLight;
+        width: calc(100% - 50px);        
 
         .progress {
             @include progressStyle;
@@ -27,19 +27,19 @@
     .value {
         @extend %fontPadrao;
         @extend %font-size-small;      
-        font-weight: 600;
-        color: $secondary;
+        @extend %weight-600;
+        @extend %color-secondary;
     }
 }
 
 .bar-negative {
     .progress-container {
         .progress {
-            background-color: $red;
+            @extend %bg-red;
         }
     }
 
     .value {
-        color: $red;
+        @extend %color-red;
     }
 }

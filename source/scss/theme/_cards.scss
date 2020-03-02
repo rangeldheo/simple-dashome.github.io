@@ -25,19 +25,19 @@
     @extend %flex-start;
     @extend %card-radius;
     @extend %card-shadow;
+    @extend %bg-dark-blue;
     @include goto;
-    padding: 12px;
-    flex-grow: 1;
-    flex-basis: 0;
-    max-width: 32.5%;
-    background-color: $textColor;
+    @extend %grow-1;
+    @extend %basic-0;
+    padding: 12px;       
+    max-width: 32.5%;    
 
     .code {
         @include typographCard;
         @extend %bold;
+        @extend %color-white;
         padding: 8px;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);     
     }
 
     .text {
@@ -45,8 +45,8 @@
 
         p,
         a {
-            padding-left: 10px;
-            color: $white;
+            @extend %color-white;
+            padding-left: 10px;            
             line-height: $defaultLineHeith;
         }
 
@@ -73,14 +73,14 @@
     @extend %elem-shadow;
     @extend %elem-radius;
     @extend %margin-bottom;
-    background-color: $white;
-    min-width: 150px;
-    flex-grow: 1;
-    flex-basis: 0;
+    @extend %bg-white;
+    @extend %grow-1;
+    @extend %basic-0;
+    min-width: 150px;   
 
     &:nth-child(odd) {
         .head {
-            background-color: $green;
+            @extend %bg-green;
         }
     }
 
@@ -89,14 +89,14 @@
         @extend %centralize;
         @extend %w-100;
         @include border-radius-separate($borderRadiusElem, $borderRadiusElem, 0, 0);
-        background-color: $colorBase;
+        @extend %bg-color-base;
         padding: 20px 12px;
 
         .user-photo {
             @extend %block;
             @extend %elem-shadow;
             @extend %circle;
-            background-color: $white;
+            @extend %bg-white;
             border: 5px solid $white;
             width: 60px;
             height: 60px;
@@ -108,13 +108,13 @@
             @extend %fontPadrao;
             @extend %font-size-smaller;
             @extend %txt-center;
-            font-weight: 600;
+            @extend %color-white;
+            @extend %bg-primary;
+            @extend %weight-600;
             left: 5%;
             bottom: -10px;
             width: 90%;
-            padding: 5px;
-            color: $white;
-            background-color: $primary;
+            padding: 5px;                       
         }
     }
 

@@ -21,11 +21,10 @@
 .btn-primary {
     @extend .btn;
     @extend %paddingButton;
-    background-color: $primary;
-    color: $white;
-
+    @extend %color-white;
+    @extend %bg-primary;
     &:hover {
-        background-color: $secondary
+        @extend %color-secondary;
     }
 }
 
@@ -34,15 +33,25 @@
     @extend %absolute;
     @extend %circle;
     @extend %elem-shadow;
+    @extend %bg-white;
     width: 24px;
-    height: 24px;
-    background-color: $white;
+    height: 24px;   
     background-image: url('https://img.icons8.com/material-outlined/16/000000/advance.png');
     background-repeat: no-repeat;
     background-position: center;
 
     &:hover {
-        background-color: $blue;
+        @extend %bg-blue;
         background-image: url('https://img.icons8.com/material-outlined/16/ffffff/advance.png');
     }
+}
+
+.btn-plus {
+    @extend %circle;
+    @extend %bg-blue;
+    width: 25px;
+    height: 25px;    
+    background-image: url('https://img.icons8.com/android/15/ffffff/plus.png');
+    background-repeat: no-repeat;
+    background-position: center
 }

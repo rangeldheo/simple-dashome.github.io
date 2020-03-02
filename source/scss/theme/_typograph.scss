@@ -2,11 +2,11 @@
     @extend %fontPadrao;
     @extend %font-size-small;
     @extend %bold;
-    color: $grey;
+    @extend %color-grey;
 }
 .paragraph{
     @extend %fontPadrao;
     @extend %font-size-medium;
-    color: $textColor;
+    @extend %text-color;
     line-height: $defaultLineHeith;
 }

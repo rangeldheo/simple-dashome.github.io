@@ -1,8 +1,8 @@
 body{
     @extend %centralize;
-    background-color: $colorBase;
+    @extend %min-height;
+    @extend %bg-color-base;
     width: 100vw;
-    min-height: 100vh;
     overflow-x: hidden;
     padding-top: 2%;
 }

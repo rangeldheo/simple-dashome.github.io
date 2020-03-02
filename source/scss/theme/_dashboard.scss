@@ -9,7 +9,7 @@
 }
 
 .dashboard-menu {
-    min-height: 100vh;
+    @extend %min-height;
     width: $dashMenu_widht;
     border-right: 1px solid #eae9ee;
 
@@ -36,7 +36,7 @@
                 @extend %flex-start;
 
                 &:hover {
-                    background-color: $colorComplement;
+                    @extend %bg-color-complement;
 
                     .icon {
                         @extend %elem-shadow;
@@ -61,9 +61,9 @@
 }
 
 .dashboard-main {
-    min-height: 100vh;
-    width: $dashMain_width;
-    background-color: $colorComplement;
+    @extend %min-height;
+    @extend %bg-color-complement;
+    width: $dashMain_width;    
     padding: 40px;
 
     .header {
@@ -94,7 +94,7 @@
                 .title {
                     @extend %margin-bottom;
                     @extend %w-100;
-                    color: $red;
+                    @extend %color-red;
                 }
 
                 .paragraph {
@@ -111,7 +111,6 @@
                 z-index: z($site-header);
                 @extend %absolute;
                 @extend %w-100;
-                bottom: -#{$tempValue};
                 height: 180px;
                 background: url('#{$path_images}/welcome.png') no-repeat center;
                 background-size: contain;
@@ -126,7 +125,7 @@
     padding: 40px 0;
 
     .list {
-        padding: 20px;       
+        padding: 20px;
     }
 }
 

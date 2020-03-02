@@ -1,0 +1,39 @@
+.pop-info {   
+    z-index: z($modal);
+    @extend %elem-shadow;
+    @extend %transition;
+    @extend %absolute;
+    @include border-radius($borderRadiusElem);
+    @extend %fontPadrao;
+    @extend %font-size-smaller;
+    @extend %hide;
+    @extend %color-white;
+    @extend %bg-dark-blue;
+    padding: 8px;
+    min-width: 200px; 
+
+    &:after {
+        z-index: z($outdated-browser);
+        position: absolute;
+        left: 10%;
+        top: 100%;
+        display: block;
+        content: '';
+        border-top: 5px solid $textColor;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;  
+    }
+}
+
+.pop-info[data-position=top] {
+    @extend %transition;
+    top: -30px;
+    
+}
+
+.pop-info[data-position=left] {
+    @extend %transition;
+    top: 50%;
+    
+}

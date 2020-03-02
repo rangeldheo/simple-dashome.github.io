@@ -1,0 +1,20 @@
+.list {
+    @extend %w-100;
+
+    .item {
+        @extend %fontPadrao;
+        @extend %font-size-small;
+        @extend %w-100;
+        border-bottom: 1px solid $greyLight;
+        padding: 8px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.list-color {
+    @extend .list;
+    margin: 25px 0;  
+}

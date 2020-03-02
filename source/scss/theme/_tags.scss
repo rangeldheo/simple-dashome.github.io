@@ -1,0 +1,22 @@
+.tag {
+    @extend %fontPadrao;
+    @extend %font-size-small;
+    @extend %centralize;
+    @extend .elem-radius;
+    @extend %bold;
+    @extend %text-color;
+    @extend %bg-greyLight;
+    padding: 5px 0;    
+}
+
+.tag-primary {
+    @extend .tag;
+    @extend %color-white;
+    @extend %bg-primary;
+}
+
+.tag-alert {
+    @extend .tag;
+    @extend %color-white;
+    @extend %bg-red;
+}

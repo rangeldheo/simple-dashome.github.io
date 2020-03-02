@@ -1,0 +1,13 @@
+.left-container {
+    @extend %w-50;
+    @extend %flex-end;
+
+    .info {
+        margin: 0 25px;
+    }
+}
+
+.right-container {
+    @extend .left-container;
+    @extend %flex-start;
+}

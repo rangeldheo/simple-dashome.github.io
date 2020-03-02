@@ -1,0 +1,321 @@
+//////////////////////////////////////
+//Layout Modules : position, display//
+//////////////////////////////////////
+%debugBorder {
+    border: 1px solid red !important
+}
+
+@mixin flex-center {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center)
+}
+
+@mixin flex-equal {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items;
+    @include justify-content(space-between)
+}
+
+@mixin flex-end {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items;
+    @include justify-content(flex-end)
+}
+
+@mixin flex-start {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items;
+    @include justify-content(flex-start)
+}
+
+%absolute {
+    position: absolute;
+}
+
+%relative {
+    position: relative;
+}
+
+%block {
+    display: block;
+}
+
+%hide {
+    display: none;
+}
+
+.hide {
+    @extend %hide;
+}
+
+%inline {
+    display: inline;
+}
+
+%inblock {
+    display: inline-block;
+}
+
+%flexbox {
+    @include flexbox;
+}
+%grow-1{
+    flex-grow: 1;
+}
+%basic-0{
+    flex-basis: 0;
+}
+.flexbox {
+    @extend %flexbox;
+}
+
+%centralize {
+    @include flex-center;
+}
+
+%centralize-equal {
+    @include flex-equal;
+}
+
+%flex-center {
+    @extend %centralize;
+}
+
+.flex-center {
+    @extend %flex-center;
+}
+
+%flex-equal {
+    @extend %centralize-equal;
+}
+
+.flex-equal {
+    @extend %flex-equal;
+}
+
+%flex-end {
+    @include flex-end;
+    @include align-items(center);
+}
+
+%flex-start {
+    @include flex-start;
+    @include align-items(center);
+}
+
+.flex-end {
+    @extend %flex-end;
+}
+
+.flex-start {
+    @extend %flex-start;
+}
+
+//////////////////////////////////////////////////////////////////
+//Box Model Modules : box-sizing, width, height, margin, padding//
+//////////////////////////////////////////////////////////////////
+%margin-auto {
+    margin: auto;
+}
+
+%margin-bottom {
+    margin-bottom: 25px;
+}
+
+%box-sizing {
+    @include box-sizing(border-box);
+}
+
+%w-100 {
+    width: 100%;
+}
+
+%w-50 {
+    width: 50%;
+}
+
+%h-100 {
+    height: 100%;
+}
+%min-height{
+    min-height: 100vh;
+}
+%paddingButton {
+    padding: $paddingButton;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//Visual attributes (COMPONENT priority) : background, border, box-shadow..//
+//////////////////////////////////////////////////////////////////////////////
+%bg-black {
+    background: $black
+}
+
+%bg-white {
+    background: $white
+}
+
+%bg-primary{
+    background-color: $primary
+}
+%bg-red{
+    background-color: $red
+}
+%bg-greyLight{
+    background-color: $greyLight;
+}
+%bg-blue{
+    background-color: $blue
+}
+%bg-dark-blue{
+    background-color: $textColor;
+}
+%bg-green{
+    background-color: $green;
+}
+%bg-color-base{
+    background-color: $colorBase;
+}
+%bg-color-complement{
+    background-color: $colorComplement;
+}
+%no-border {
+    border: none;
+}
+
+%circle {
+    @include border-radius(50%);
+}
+
+%elem-shadow {
+    box-shadow: 0 2px 10px 3px rgba(0, 0, 0, 0.15);
+}
+
+%card-shadow {
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.025);
+}
+%card-radius{
+    @include border-radius($borderRadiusCard);
+}
+%elem-radius {
+    @include border-radius($borderRadiusElem);
+}
+
+.circle {
+    @extend %circle;
+}
+
+.cont-radius {
+    @include border-radius($borderRadiusCont);
+}
+
+.card-radius {
+   @extend %card-radius;
+}
+
+.elem-radius {
+    @extend %elem-radius;
+}
+
+.elem-shadow {
+    @extend %elem-shadow;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//Visual attributes (ELEMENT priority) : font-size, font-family, text-align, text-transform, color..//
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+%font {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+%font-secondary {
+    font-family: Arial, sans-serif;
+}
+
+%font-size-large {
+    font-size: $fontLarge;
+}
+
+%font-size-default {
+    font-size: $fontDefault;
+}
+
+%font-size-medium {
+    font-size: $fontMedium;
+}
+
+%font-size-small {
+    font-size: $fontSmall;
+}
+
+%font-size-smaller {
+    font-size: $fontSmaller;
+}
+
+%txt-center {
+    text-align: center;
+}
+
+%txt-left {
+    text-align: left;
+}
+
+%txt-right {
+    text-align: right;
+}
+
+%txt-upper {
+    text-transform: uppercase;
+}
+
+%txt-lower {
+    text-transform: lowercase;
+}
+
+%bold {
+    font-weight: bold;
+}
+%weight-600{
+    font-weight: 600;
+}
+%text-color {
+    color: $textColor;
+}
+
+%color-primary {
+    color: $primary;
+}
+
+%color-secondary {
+    color: $secondary;
+}
+
+%color-black {
+    color: $black;
+}
+
+%color-white {
+    color: $white;
+}
+%color-red{
+    color: $red;
+}
+%color-grey{
+    color: $grey;
+}
+%italic {
+    font-style: italic;
+}
+
+%pointer {
+    cursor: pointer;
+}
+
+%transition {
+    transition: all .2s ease-in-out;
+}

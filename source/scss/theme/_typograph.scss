@@ -1,0 +1,12 @@
+.info{
+    @extend %fontPadrao;
+    @extend %font-size-small;
+    @extend %bold;
+    @extend %color-grey;
+}
+.paragraph{
+    @extend %fontPadrao;
+    @extend %font-size-medium;
+    @extend %text-color;
+    line-height: $defaultLineHeith;
+}

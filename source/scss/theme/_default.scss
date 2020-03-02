@@ -1,0 +1,17 @@
+body{
+    @extend %centralize;
+    @extend %min-height;
+    @extend %bg-color-base;
+    width: 100vw;
+    overflow-x: hidden;
+    padding-top: 2%;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.separator{
+    @extend %block;
+    @extend %w-100;
+    @extend %margin-bottom;
+}

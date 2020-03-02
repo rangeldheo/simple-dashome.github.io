@@ -1,0 +1,69 @@
+@mixin reportCards{
+    @include cardBasic;
+    @extend %card-shadow;
+    @extend %card-shadow;    
+    .header{
+        @include align-items(center);
+        @extend %w-100;
+        height: 30px;
+    }
+}
+.card-last-results {  
+    @include reportCards;   
+    @extend %bg-white;   
+    width: 38%;
+    min-height: 250px;
+    padding: 12px;
+}
+
+.card-time-learn {   
+    @extend %flex-equal;
+    @extend .card-last-results;
+    width: 58%;
+    .verticalBars{
+        border-top: 1px solid $colorComplement;
+        padding-top: 10px;
+        @extend %w-100;
+    }
+}
+
+@mixin reportTypograph {
+    @extend %fontPadrao;
+    @extend %font-size-smaller;
+    @extend %weight-600;
+}
+
+.report-item {
+    @extend %flex-equal;
+    @extend %w-100;
+    border-bottom: 1px solid $greyLight;
+    padding: 12px 0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+    .text {
+        @extend %flex-start;
+        width: 65%;
+
+        .identifier {
+            @include reportTypograph;
+            @extend %text-color;
+            margin-right: 5px;
+        }
+
+        .name {
+            @include reportTypograph;
+            @extend %color-grey;
+        }
+    }
+
+    .bar {
+        @extend %h-100;
+        width: 35%;
+
+        .value {
+            @extend %font-size-small
+        }
+    }
+}

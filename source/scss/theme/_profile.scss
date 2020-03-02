@@ -1,0 +1,27 @@
+.my-profile {
+    @extend %w-100;
+
+    .head {
+        @extend %relative;
+        @extend %centralize;
+        @extend %w-100;
+
+        .profile-photo {
+            @extend %circle;
+            @extend %bg-white;
+            border: 3px solid $greyLight;
+            padding: 20px;            
+        }
+
+        .btn-plus {
+            @extend %pointer;
+            @extend %absolute;
+            right: calc(50% - 70px);
+            bottom: calc(50% - 70px);
+
+            &:hover {
+                @extend %bg-dark-blue;
+            }
+        }
+    }
+}

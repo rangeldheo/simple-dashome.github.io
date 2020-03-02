@@ -1,0 +1,127 @@
+@mixin cardBasic($shadow:false) {
+    @extend .card-radius;
+
+    @if $shadow {
+        @extend .elem-shadow;
+    }
+}
+
+.meus-cursos {
+    @extend %flex-equal;
+
+    .header {
+        @extend %w-100;
+    }
+}
+
+@mixin typographCard {
+    @extend %fontPadrao;
+    @extend %font-size-small;
+    @extend %elem-radius;
+}
+
+.card-curso {
+    @extend %relative;
+    @extend %flex-start;
+    @extend %card-radius;
+    @extend %card-shadow;
+    @extend %bg-dark-blue;
+    @include goto;
+    @extend %grow-1;
+    @extend %basic-0;
+    padding: 12px;       
+    max-width: 32.5%;    
+
+    .code {
+        @include typographCard;
+        @extend %bold;
+        @extend %color-white;
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.2);     
+    }
+
+    .text {
+        @include typographCard;
+
+        p,
+        a {
+            @extend %color-white;
+            padding-left: 10px;            
+            line-height: $defaultLineHeith;
+        }
+
+        p {
+            @extend %font-size-smaller;
+        }
+
+        a {
+            @extend %bold;
+        }
+    }
+}
+
+.card-users {
+    @extend %w-100;
+    @extend %flex-equal;
+
+    .card-user {
+        max-width: 24%;
+    }
+}
+
+.card-user {
+    @extend %elem-shadow;
+    @extend %elem-radius;
+    @extend %margin-bottom;
+    @extend %bg-white;
+    @extend %grow-1;
+    @extend %basic-0;
+    min-width: 150px;   
+
+    &:nth-child(odd) {
+        .head {
+            @extend %bg-green;
+        }
+    }
+
+    .head {
+        @extend %relative;
+        @extend %centralize;
+        @extend %w-100;
+        @include border-radius-separate($borderRadiusElem, $borderRadiusElem, 0, 0);
+        @extend %bg-color-base;
+        padding: 20px 12px;
+
+        .user-photo {
+            @extend %block;
+            @extend %elem-shadow;
+            @extend %circle;
+            @extend %bg-white;
+            border: 5px solid $white;
+            width: 60px;
+            height: 60px;
+        }
+
+        .name {
+            @extend %absolute;
+            @extend %elem-radius;
+            @extend %fontPadrao;
+            @extend %font-size-smaller;
+            @extend %txt-center;
+            @extend %color-white;
+            @extend %bg-primary;
+            @extend %weight-600;
+            left: 5%;
+            bottom: -10px;
+            width: 90%;
+            padding: 5px;                       
+        }
+    }
+
+    .content {
+        @extend %relative;
+        @include goto;
+        @extend %w-100;
+        padding: 12px;
+    }
+}

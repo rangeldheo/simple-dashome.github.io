@@ -2,19 +2,29 @@
     Função para automatizar a compatibilidade de z-idexes
 */
 
-$z-indexes: (
-"outdated-browser",
-"modal",
-"site-header",
-"page-wrapper",
-"site-footer"
+$z-indexes: ("outdated-browser",
+    "modal",
+    "site-header",
+    "page-wrapper",
+    "site-footer"
 );
 
 @function z($name) {
     @if index($z-indexes, $name) {
-        @return (length($z-indexes) - index($z-indexes, $name)) + 1;
-    } @else {
+        @return (length($z-indexes) - index($z-indexes, $name))+1;
+    }
+
+    @else {
         @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
         @return null;
+    }
+}
+
+@mixin goto($x:5px, $y:5px) {
+    .goto {
+        @extend %pointer;
+        @extend %absolute;
+        bottom: $x;
+        right: $y;
     }
 }

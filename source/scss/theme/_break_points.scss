@@ -1,11 +1,13 @@
 @media (max-width: 1366px) {
     .dashboard {
         width: 96vw;
-        .header{
-            .title{
+
+        .header {
+            .title {
                 font-size: 1.2rem;
             }
         }
+
         .dashboard-menu {
             .menu {
                 li {
@@ -18,7 +20,24 @@
             }
         }
     }
-    .paragraph{
+
+    .paragraph {
         font-size: $fontSmall;
+    }
+}
+
+@media (max-width:1280px) {
+
+    .card-last-results,
+    .card-time-learn {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+}
+
+@media(max-width:1024px) {
+    .card-user {
+        min-width: 48%;        
     }
 }

@@ -1,4 +1,5 @@
-.icon {         
+.icon {  
+    @extend %transition;       
     width: $iconSize;
     height: $iconSize;
 }

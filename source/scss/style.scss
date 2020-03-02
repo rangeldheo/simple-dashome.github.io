@@ -1,6 +1,7 @@
 @import "settings";
 @import "core/css-reset";
 @import "core/css3_crosbrowser";
+@import "core/animate";
 @import "core/flexbox";
 @import "core/extends";
 @import "core/fonts";
@@ -8,10 +9,15 @@
 @import "theme/default";
 @import "theme/icons";
 @import "theme/typograph";
-@import "theme/components";
+@import "theme/buttos";
+@import "theme/cards";
+@import "theme/containers";
 @import "theme/bars";
+@import "theme/bars_vertical";
 @import "theme/dashboard";
 @import "theme/pop";
+@import "theme/tags";
 @import "theme/reports";
-@import "theme/vertical_bars";
+@import "theme/lists";
+@import "theme/profile";
 @import "theme/break_points";

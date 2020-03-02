@@ -1,9 +1,10 @@
 .dashboard {
-    @extend .cont-radius;
     @extend %centralize;
+    @include align-items(stretch);
+    @extend .cont-radius;
     @extend %margin-bottom;
     width: 88vw;
-    min-height: 80vh;
+    min-height: 60vh;
     background-color: #fff;
 }
 
@@ -36,6 +37,10 @@
 
                 &:hover {
                     background-color: $colorComplement;
+
+                    .icon {
+                        @extend %elem-shadow;
+                    }
                 }
             }
 
@@ -116,13 +121,16 @@
 }
 
 .dashboard-actions {
-    @extend %h-100;
     width: $dashActions_width;
     border-left: 1px solid #eae9ee;
-    padding: 40px 40px 40px 0;
+    padding: 40px 0;
+
+    .list {
+        padding: 20px;       
+    }
 }
 
-@mixin headerTypograph {   
+@mixin headerTypograph {
     @extend %fontPadrao;
     @extend %bold;
     @extend %text-color;

@@ -1,15 +1,22 @@
-.card-last-results {
+@mixin reportCards{
     @include cardBasic;
+    @extend %card-shadow;
+    @extend %card-shadow;    
+    .header{
+        @include align-items(center);
+        @extend %w-100;
+        height: 30px;
+    }
+}
+.card-last-results {  
+    @include reportCards;      
     width: 38%;
     min-height: 250px;
     background-color: $white;
     padding: 12px;
-    .subtitle{
-        margin-top: 20px;
-    }
 }
 
-.card-time-learn {
+.card-time-learn {   
     @extend %flex-equal;
     @extend .card-last-results;
     width: 58%;

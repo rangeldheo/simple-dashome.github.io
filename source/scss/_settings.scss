@@ -12,9 +12,14 @@ $grey             : lighten($black,70%);
 $greyLight        : lighten($black,90%);
 $red              : rgba(255,128,139,1);
 $redLight         : rgba(248,229,233,1);
-$green            : rgba(70,191,189,1);
+$green            : rgba(0,157,175,1);
 $greenLight       : rgba(196,255,255,1);
 $yellow           : rgba(253,180,92,1);
+$blue             : rgba(95,128,245,1);
+
+$dashMenu_widht    : 18%;
+$dashActions_width : 20%;
+$dashMain_width    : 100% - ($dashMenu_widht + $dashActions_width);
 
 $borderRadiusCont : 20px;
 $borderRadiusCard : 10px;
@@ -38,6 +43,9 @@ $site-header      : 'site-header';
 $page-wrapper     : 'page-wrapper';
 $site-footer      : 'site-footer';
 
-$dashMenu_widht    : 15%;
-$dashActions_width : 20%;
-$dashMain_width    : 100% - ($dashMenu_widht + $dashActions_width);
+$paddingButton    : 0 10px;
+
+$barRotation      : 45deg;
+$barSizeLine      : 2px;
+
+$barHeight        : 5px;

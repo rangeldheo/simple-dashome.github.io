@@ -1,0 +1,127 @@
+@mixin cardBasic($shadow:false) {
+    @extend .card-radius;
+
+    @if $shadow {
+        @extend .elem-shadow;
+    }
+}
+
+.meus-cursos {
+    @extend %flex-equal;
+
+    .header {
+        @extend %w-100;
+    }
+}
+
+@mixin typographCard {
+    @extend %fontPadrao;
+    @extend %font-size-small;
+    @extend %elem-radius;
+}
+
+.card-curso {
+    @extend %relative;
+    @extend %flex-start;
+    @extend %card-radius;
+    @extend %card-shadow;
+    @include goto;
+    padding: 12px;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 32.5%;
+    background-color: $textColor;
+
+    .code {
+        @include typographCard;
+        @extend %bold;
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    .text {
+        @include typographCard;
+
+        p,
+        a {
+            padding-left: 10px;
+            color: $white;
+            line-height: $defaultLineHeith;
+        }
+
+        p {
+            @extend %font-size-smaller;
+        }
+
+        a {
+            @extend %bold;
+        }
+    }
+}
+
+.card-users {
+    @extend %w-100;
+    @extend %flex-equal;
+
+    .card-user {
+        max-width: 24%;
+    }
+}
+
+.card-user {
+    @extend %elem-shadow;
+    @extend %elem-radius;
+    @extend %margin-bottom;
+    background-color: $white;
+    min-width: 150px;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    &:nth-child(odd) {
+        .head {
+            background-color: $green;
+        }
+    }
+
+    .head {
+        @extend %relative;
+        @extend %centralize;
+        @extend %w-100;
+        @include border-radius-separate($borderRadiusElem, $borderRadiusElem, 0, 0);
+        background-color: $colorBase;
+        padding: 20px 12px;
+
+        .user-photo {
+            @extend %block;
+            @extend %elem-shadow;
+            @extend %circle;
+            background-color: $white;
+            border: 5px solid $white;
+            width: 60px;
+            height: 60px;
+        }
+
+        .name {
+            @extend %absolute;
+            @extend %elem-radius;
+            @extend %fontPadrao;
+            @extend %font-size-smaller;
+            @extend %txt-center;
+            font-weight: 600;
+            left: 5%;
+            bottom: -10px;
+            width: 90%;
+            padding: 5px;
+            color: $white;
+            background-color: $primary;
+        }
+    }
+
+    .content {
+        @extend %relative;
+        @include goto;
+        @extend %w-100;
+        padding: 12px;
+    }
+}

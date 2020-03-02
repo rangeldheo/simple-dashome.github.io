@@ -11,11 +11,3 @@
     @extend .left-container;
     @extend %flex-start;
 }
-
-@mixin cardBasic($shadow:false) {
-    @extend .card-radius;
-
-    @if $shadow {
-        @extend .elem-shadow;
-    }
-}

@@ -10,3 +10,8 @@ a{
     color:inherit;
     text-decoration: none;
 }
+.separator{
+    @extend %block;
+    @extend %w-100;
+    @extend %margin-bottom;
+}

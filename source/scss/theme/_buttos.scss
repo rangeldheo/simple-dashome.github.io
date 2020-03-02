@@ -1,0 +1,48 @@
+@mixin buttonBasic($boder:false) {
+    @extend %transition;
+    @extend %pointer;
+
+    @if $boder {
+        border: $boder
+    }
+
+    @else {
+        border: none
+    }
+
+    height: 30px;
+}
+
+.btn {
+    @include buttonBasic();
+    @extend .elem-radius;
+}
+
+.btn-primary {
+    @extend .btn;
+    @extend %paddingButton;
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+        background-color: $secondary
+    }
+}
+
+.goto {
+    @extend %transition;
+    @extend %absolute;
+    @extend %circle;
+    @extend %elem-shadow;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    background-image: url('https://img.icons8.com/material-outlined/16/000000/advance.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+        background-color: $blue;
+        background-image: url('https://img.icons8.com/material-outlined/16/ffffff/advance.png');
+    }
+}

@@ -1,0 +1,63 @@
+.verticalBars {
+    @extend %flex-start;
+    @include align-items(end);
+    height: 150px;
+
+    .item-bar {
+        @extend %pointer;
+        @extend %transition;
+        @extend %relative;
+        @include border-radius($borderRadiusElem);
+        flex-grow: 1;
+        flex-basis: 0;
+        background-color: $greyLight;
+        background-image: repeating-linear-gradient($barRotation, transparent, transparent $barSizeLine, rgba(255, 255, 255, .5) $barSizeLine, rgba(255, 255, 255, .5) 2 * $barSizeLine);
+        min-height: 2px;
+        margin: 0 3px;
+
+        .tag {
+            @extend %absolute;
+            width: 90%;
+            bottom: 5px;
+            left: 5%;
+        }
+
+        .item {
+            @extend %fontPadrao;
+            @extend %font-size-smaller;
+            @extend %absolute;
+            @extend %txt-center;
+            @extend %elem-radius;
+            @extend %w-100;
+            margin-top: 5px;
+            top: 100%;
+            padding: 3px 0;
+            background-color: $primary;
+            color: $white;          
+        }
+
+        &:nth-child(even) {
+            background-color: $green;
+        }
+
+        &:nth-child(odd) {
+            background-color: $blue
+        }
+
+        &:hover {
+            .pop-info {
+                @extend %block;
+            }
+        }
+
+        &:last-child {
+            .pop-info {
+                right: 0%;
+
+                &:after {
+                    left: 80%;
+                }
+            }
+        }
+    }
+}

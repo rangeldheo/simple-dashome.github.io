@@ -775,5 +775,8 @@ a {
   .card-user {
     min-width: 48%;
   }
+  .dashboard-menu .header .title {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

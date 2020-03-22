@@ -625,7 +625,7 @@ a {
 
 .dashboard-main .card-welcome {
   background-color: #f8e5e9;
-  height: 150px;
+  min-height: 150px;
   padding: 25px;
 }
 

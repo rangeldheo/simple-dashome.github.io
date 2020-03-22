@@ -81,7 +81,7 @@
         @extend %w-100;
         @include cardBasic;
         background-color: $redLight;
-        height: 150px;
+        min-height: 150px;
         padding: $tempValue;
         @extend %margin-bottom;
 

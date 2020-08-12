@@ -460,7 +460,8 @@ a {
 
 .card-curso {
   padding: 12px;
-  max-width: 32.5%;
+  width: 32%;
+  margin: 5px 0.5%;
 }
 
 .card-curso .goto {
@@ -480,7 +481,8 @@ a {
 }
 
 .card-users .card-user {
-  max-width: 24%;
+  margin: 0 0.5%;
+  width: 24%;
 }
 
 .card-user {
@@ -777,6 +779,47 @@ a {
   }
   .dashboard-menu .header .title {
     display: none;
+  }
+  .dashboard .dashboard-menu {
+    width: 8%;
+    min-width: 50px;
+  }
+  .dashboard .dashboard-menu .menu li .link {
+    padding: 10px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dashboard .dashboard-menu .menu li .link span {
+    display: none;
+  }
+  .dashboard .dashboard-main {
+    width: 72%;
+  }
+}
+
+@media (max-width: 900px) {
+  .meus-cursos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .meus-cursos .card-curso {
+    width: 100%;
+  }
+}
+
+@media (max-width: 590px) {
+  .card-users {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-users .card-user {
+    width: 100%;
+    margin: 5px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

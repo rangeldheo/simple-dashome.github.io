@@ -49,3 +49,9 @@ $barRotation      : 45deg;
 $barSizeLine      : 2px;
 
 $barHeight        : 5px;
+
+@media(max-width:1200px) {
+    $dashMenu_widht    : 10%;
+    $dashActions_width : 20%;
+    $dashMain_width    : 100% - ($dashMenu_widht + $dashActions_width);
+}

@@ -30,7 +30,8 @@
     @extend %grow-1;
     @extend %basic-0;
     padding: 12px;       
-    max-width: 32.5%;    
+    width: 32%;    
+    margin: 5px 0.5%;
 
     .code {
         @include typographCard;
@@ -65,7 +66,8 @@
     @extend %flex-equal;
 
     .card-user {
-        max-width: 24%;
+        margin: 0 0.5%;
+        width: 24%;
     }
 }
 

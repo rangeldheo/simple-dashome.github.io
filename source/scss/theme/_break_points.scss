@@ -1,46 +1,82 @@
 @media (max-width: 1366px) {
-    .dashboard {
-        width: 96vw;
+	.dashboard {
+		width: 96vw;
 
-        .header {
-            .title {
-                font-size: 1.2rem;
-            }
-        }
+		.header {
+			.title {
+				font-size: 1.2rem;
+			}
+		}
 
-        .dashboard-menu {
-            .menu {
-                li {
-                    .link {
-                        padding: 10px 0 10px 20px;
-                        font-size: 0.75rem;
-                        font-weight: 500;
-                    }
-                }
-            }
-        }
-    }
+		.dashboard-menu {
+			.menu {
+				li {
+					.link {
+						padding: 10px 0 10px 20px;
+						font-size: 0.75rem;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
 
-    .paragraph {
-        font-size: $fontSmall;
-    }
+	.paragraph {
+		font-size: $fontSmall;
+	}
 }
 
 @media (max-width:1280px) {
 
-    .card-last-results,
-    .card-time-learn {
-        padding-bottom: 25px;
-        margin-bottom: 25px;
-        width: 100%;
-    }
+	.card-last-results,
+	.card-time-learn {
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		width: 100%;
+	}
 }
 
 @media(max-width:1200px) {
-    .card-user {
-        min-width: 48%;        
+	.card-user {
+		min-width: 48%; 
+	}
+	.dashboard-menu .header .title{
+		display: none;
     }
-    .dashboard-menu .header .title{
-        display: none;
+    .dashboard{
+        .dashboard-menu{
+            width:8%;
+            min-width: 50px;
+            .menu li {
+                .link{
+                    padding: 10px 0;
+                    justify-content: center;
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .dashboard-main{
+            width:72%
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .meus-cursos{
+        flex-direction: column;
+        .card-curso{          
+            width:100%;
+        }
+    }
+}
+@media(max-width:590px){
+    .card-users {
+        flex-direction: column;
+        .card-user {
+            width: 100%;
+            margin: 5px 0;
+        }
     }
 }
